@@ -1,0 +1,421 @@
+@import "reset";
+@import "mixin";
+@import "function";
+
+// 全体設定 *** ここから ***********
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+  color: $color-font-base;
+}
+
+// 全体設定 *** ここまで ***********
+
+// レイアウト *** ここから ***********
+
+.ly_cat-content {
+  @include mq(pc) {
+    padding-bottom: 130px;
+  }
+  padding-bottom: getVW(pc, 130);
+  @include mq(sp) {
+    padding-bottom: getVW(sp, 125);
+  }
+}
+
+.ly_section {
+  @include mq(pc) {
+    width: 978px;
+    margin-top: 150px;
+  }
+
+  width: getVW(pc, 978);
+  margin-top: getVW(pc, 150);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq(sp) {
+    width: getVW(sp, 340);
+    margin-top: getVW(sp, 90);
+  }
+}
+
+.ly_footer {
+  @include mq(pc) {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  }
+
+  padding-top: getVW(pc, 60);
+  padding-bottom: getVW(pc, 60);
+
+  @include mq(sp) {
+  padding-top: getVW(sp, 15);
+  padding-bottom: getVW(sp, 15);
+  }
+}
+
+// レイアウト *** ここまで ***********
+
+// エレメント *** ここから ***********
+
+.el_title-size-l {
+  @include mq(pc) {
+    font-size: 4.2rem;
+  }
+
+  font-size: getVW(pc, 42);
+  font-weight: 400;
+  letter-spacing: getLetterSpacing(100);
+  @include getLineHeight(42, 71);
+
+  @include mq(sp) {
+    font-size: getVW(sp, 36);
+  }
+}
+
+.el_title-size-l.el_title-size-l__center {
+  text-align: center;
+}
+
+.el_text-size-l {
+  @include mq(pc) {
+    font-size: 2.0rem;
+  }
+
+  font-size: getVW(pc, 20);
+  font-weight: 400;
+  letter-spacing: getLetterSpacing(50);
+  @include getLineHeight(20, 40);
+
+  @include mq(sp) {
+    font-size: getVW(sp, 16);
+  }
+}
+
+.el_annotation-size-m {
+  font-size: 1.2em;
+  @include getLineHeight(12, 24);
+  @include mq(sp) {
+    font-size: getVW(sp, 12);
+  }
+}
+
+.el_title-size-m {
+  @include mq(pc) {
+    font-size: 3.6rem;
+  }
+
+  font-size: getVW(pc, 36);
+  font-weight: 400;
+  letter-spacing: getLetterSpacing(100);
+  @include getLineHeight(36, 61);
+
+  @include mq(sp) {
+    font-size: getVW(sp, 28);
+  }
+}
+
+.el_title-size-m.el_title-size-m__center {
+  text-align: center;
+}
+
+.el_variable-img {
+  display: block;
+  width: 100%;
+}
+
+// レイアウト *** ここまで ***********
+
+// ブロック  *** ここから ***********
+.bl_hero {
+  background-image: url(/dest/img/hero-back.svg);
+  background-repeat: repeat-x;
+  background-size: 30%;
+  background-position: bottom 15% left;
+}
+
+.bl_hero_imgWrapper {
+  @include mq(pc) {
+    width: 1280px;
+  }
+
+  width: getVW(pc, 1280);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq(sp) {
+    width: 100%;
+  }
+}
+
+.bl_textArea_text {
+  @include mq(pc) {
+    margin-top: 60px;
+  }
+
+  margin-top: getVW(pc, 60);
+  @include mq(sp) {
+    margin-top: getVW(sp, 45);
+  }
+}
+
+.bl_withImage-textArea {
+  position: relative;
+
+  @include mq(sp) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.bl_withImage-textArea_imageArea {
+  @include mq(pc) {
+    width: 525px;
+  }
+
+  width: getVW(pc, 525);
+  
+  @include mq(sp) {
+    width: getVW(sp, 399);
+    margin-top: getVW(sp, 45);
+    margin-left: getVW(sp, -59);
+  }
+}
+
+.bl_withImage-textArea_imageArea_img {
+  @include mq(pc) {
+    margin-left: -215px;
+  }
+  margin-left: getVW(pc, -215);
+  
+  @include mq(sp) {
+    margin-left: 0;
+  }
+}
+
+.bl_withImage-textArea_imageArea_caption {
+  @include mq(pc) {
+    margin-top: 10px;
+  }
+
+  margin-top: getVW(pc, 10);
+
+  @include mq(sp) {
+    margin-top: getVW(sp, 10);
+    text-align: right;
+  }
+}
+
+.bl_withImage-textArea_textArea {
+  @include mq(pc) {
+    top: 104px;
+  }
+
+  width: 100%;
+  position: absolute;
+  top: getVW(pc, 104);
+
+  @include mq(sp) {
+    position: static;
+  }
+}
+
+.bl_withImage-textArea_textArea_text {
+  @include mq(pc) {
+    width: 644px;
+  }
+
+  width: getVW(pc, 644);
+  margin-right: 0;
+  margin-left: auto;
+  
+  @include mq(sp) {
+    width: 100%;
+    margin-right: auto;
+  }
+}
+
+.bl_distributionArea {
+  @include mq(pc) {
+    margin-top: 60px;
+    height: 808px;
+  }
+
+  overflow: hidden;
+  width: 100%;
+  height: getVW(pc, 808);
+  position: relative;
+  margin-top: getVW(pc, 60);
+  
+  @include mq(sp) {
+    height: getVW(sp, 275);
+    margin-top: getVW(sp, 45);
+  }
+}
+
+.bl_distributionArea_direction {
+  @include mq(pc) {
+    font-size: 2.6rem;
+  }
+
+  position: absolute;
+  font-size: getVW(pc, 26);
+  font-weight: 400;
+  letter-spacing: getLetterSpacing(50);
+  @include getLineHeight(26, 40);
+
+  @include mq(sp) {
+    font-size: getVW(sp, 10);
+  }
+}
+
+.bl_distributionArea_direction__top {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.bl_distributionArea_direction__right {
+  top: 50%;
+  right: 1.2em;
+  transform: translate(0, -50%);
+}
+
+.bl_distributionArea_direction__left {
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.bl_distributionArea_direction__bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.bl_distributionArea_grid {
+  @include mq(pc) {
+    height: 724px;
+    margin-top: 43px;
+  }
+
+  width: 724 / 978 * 100%;
+  height: getVW(pc, 724);
+  position: relative;
+  margin-top: getVW(pc, 43);
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url(/dest/img/distribution-back.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  @include mq(sp) {
+    width: 241 / 340 * 100%;
+    height: getVW(sp, 241);
+    margin-top: getVW(sp, 18);
+  }
+}
+
+.bl_distributionArea_item {
+  width: 103 / 724 * 100%;
+  position: absolute;
+  @include mq(sp) {
+    width: 34 / 241 * 100%;
+    
+  }
+}
+
+.bl_distributionArea_item__01 {
+  @include mq(pc) {
+    top: 19px;
+    left: 84px;
+  }
+
+  top: getVW(pc, 19);
+  left: getVW(pc, 84);
+
+  @include mq(sp) {
+    top: getVW(sp, 14);
+    left: getVW(sp, 29);
+  }
+}
+
+.bl_distributionArea_item__02 {
+  @include mq(pc) {
+    top: 420px;
+    left: 84px;
+  }
+
+  top: getVW(pc, 420);
+  left: getVW(pc, 84);
+
+  @include mq(sp) {
+    top: getVW(sp, 148);
+    left: getVW(sp, 29);
+  }
+}
+
+.bl_distributionArea_item__03 {
+  @include mq(pc) {
+    top: 19px;
+    left: 603px;
+  }
+
+  top: getVW(pc, 19);
+  left: getVW(pc, 603);
+
+  @include mq(sp) {
+    top: getVW(sp, 14);
+    left: getVW(sp, 201);
+  }
+}
+
+.bl_distributionArea_item__04 {
+  @include mq(pc) {
+    top: 508px;
+    left: 603px;
+  }
+
+  top: getVW(pc, 510);
+  left: getVW(pc, 603);
+
+  @include mq(sp) {
+    top: getVW(sp, 178);
+    left: getVW(sp, 201);
+  }
+}
+
+.bl_footer {
+  background-color: $color-footer;
+}
+
+.bl_footer_copyright {
+  @include mq(pc) {
+    font-size: 8.0rem;
+  }
+
+  display: block;
+  font-size: getVW(pc, 80);
+  font-weight: 400;
+  letter-spacing: getLetterSpacing(50);
+  color: $color-ffffff;
+  text-align: center;
+  @include getLineHeight(80, 80);
+
+  @include mq(sp) {
+    font-size: getVW(sp, 30);
+  }
+}
+// ブロック  *** ここまで ***********
+
+@import "sample";
