@@ -1,0 +1,39 @@
+@import "variable";
+
+// メディアクエリ ここから
+
+$breakpoints: (
+  'sp': 'screen and (max-width: ' + $base-width-breakpoint + 'px)',
+  'pc': 'screen and (min-width: ' + $base-width-breakpoint-max + 'px)',
+) !default;
+
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// メディアクエリ ここまで
+
+// 行間の上下余白無効化 ここから
+
+@mixin getLineHeight($fontSize, $lineSpacing, $line-height: round($lineSpacing / $fontSize * 100) / 100) {
+  overflow: hidden;
+  line-height: $line-height;
+  &::before {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: calc((1 - #{$line-height}) * .5em);
+    content: "";
+  }
+  &::after {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-bottom: calc((1 - #{$line-height}) * .5em);
+    content: "";
+  }
+}
+
+// 行間の上下余白無効化 ここまで
