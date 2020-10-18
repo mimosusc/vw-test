@@ -1,3 +1,5 @@
+@import "mixin";
+
 .ly_section {
   @include mq(pc) {
     color: red !important;
