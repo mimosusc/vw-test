@@ -138,7 +138,7 @@ body {
 
 // ブロック  *** ここから ***********
 .bl_hero {
-  background-image: url(/docs/img/hero-back.svg);
+  background-image: url($img-path + 'hero-back.svg');
   background-repeat: repeat-x;
   background-size: 30%;
   background-position: bottom 15% left;
@@ -315,7 +315,7 @@ body {
   margin-top: getVW(pc, 43);
   margin-right: auto;
   margin-left: auto;
-  background-image: url(/docs/img/distribution-back.svg);
+  background-image: url($img-path + 'distribution-back.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
