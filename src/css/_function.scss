@@ -1,0 +1,13 @@
+@import "variable";
+
+@function getVW($baseDevice, $pixelSize) {
+  @if $baseDevice == 'pc' {
+    @return round($pixelSize / $base-width-pc * 10000) / 100 + vw;
+  } @else if $baseDevice == 'sp' {
+    @return round($pixelSize / $base-width-sp * 10000) / 100 + vw;
+  }
+}
+
+@function getLetterSpacing($tracking) {
+  @return $tracking / 1000 + em;
+}
