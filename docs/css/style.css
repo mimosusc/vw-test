@@ -270,7 +270,7 @@ body {
 }
 
 .bl_hero {
-  background-image: url(/docs/img/hero-back.svg);
+  background-image: url("/vw-test/img/hero-back.svg");
   background-repeat: repeat-x;
   background-size: 30%;
   background-position: bottom 15% left;
@@ -499,7 +499,7 @@ body {
   margin-top: 3.36vw;
   margin-right: auto;
   margin-left: auto;
-  background-image: url(/docs/img/distribution-back.svg);
+  background-image: url("/vw-test/img/distribution-back.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
