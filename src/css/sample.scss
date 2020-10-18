@@ -1,0 +1,9 @@
+.ly_section {
+  @include mq(pc) {
+    color: red !important;
+  }
+  color: green !important;
+  @include mq(sp) {
+    color: blue !important;
+  }
+}
