@@ -46,6 +46,6 @@ module.exports = {
     new ExtractTextPlugin('[name].css'),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dest')
+    contentBase: path.join(__dirname, 'docs')
   }
 };
