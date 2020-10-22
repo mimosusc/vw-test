@@ -252,7 +252,6 @@ body {
   }
 
   overflow: hidden;
-  width: 100%;
   height: getVW(pc, 808);
   position: relative;
   margin-top: getVW(pc, 60);
@@ -305,11 +304,12 @@ body {
 
 .bl_distributionArea_grid {
   @include mq(pc) {
+    width: 724px;
     height: 724px;
     margin-top: 43px;
   }
 
-  width: 724 / 978 * 100%;
+  width: getVW(pc, 724);
   height: getVW(pc, 724);
   position: relative;
   margin-top: getVW(pc, 43);

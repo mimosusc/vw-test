@@ -411,7 +411,6 @@ body {
 
 .bl_distributionArea {
   overflow: hidden;
-  width: 100%;
   height: 63.13vw;
   position: relative;
   margin-top: 4.69vw;
@@ -493,7 +492,7 @@ body {
 }
 
 .bl_distributionArea_grid {
-  width: 74.02863%;
+  width: 56.56vw;
   height: 56.56vw;
   position: relative;
   margin-top: 3.36vw;
@@ -506,6 +505,7 @@ body {
 
 @media screen and (min-width: 1281px) {
   .bl_distributionArea_grid {
+    width: 724px;
     height: 724px;
     margin-top: 43px;
   }
